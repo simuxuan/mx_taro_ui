@@ -3,25 +3,30 @@ import './app.scss'
 
 import _ from './utills/util/UtilExt'
 
-let arr = [1,2]
+let arr = [1,2,1]
+let arr1 = [2,3]
+// console.log(_.union<number>(arr,arr1));
+console.log(_.uuid(10));
 
-arr = _.filter(arr, (item)=> {
-  console.log(item);
-  return item == 2
-})
-console.log(arr);
+// void不是没有返回值，是可以没返回值
+let fn : (...args: any[])=> void = function(name) {
+  return name
+}
+
+console.log(fn(123));
+
 
 
 class App extends Component<PropsWithChildren> {
 
-  componentDidMount () {}
+  componentDidMount() { }
 
-  componentDidShow () {}
+  componentDidShow() { }
 
-  componentDidHide () {}
+  componentDidHide() { }
 
   // this.props.children 是将要会渲染的页面
-  render () {
+  render() {
     return this.props.children
   }
 }
